@@ -13,7 +13,7 @@ class ConnexionController extends Controller
     function login(Request $request){
         if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
            $request->session()->regenerate();
-           return redirect()->intended('test'); 
+           return redirect()->intended('/'); 
         }
         return back()->withErrors([
             'email'=>'Adresse email invalide!',

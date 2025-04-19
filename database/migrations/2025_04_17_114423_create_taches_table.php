@@ -18,7 +18,7 @@ return new class extends Migration
             $table->date('dateDebut');
             $table->date('datefin');
             $table->foreignId('user_id')->constrained();
-            $table->string('etat');
+            $table->enum('etat',['start','progress','dane']);
             $table->timestamps();
         });
     }

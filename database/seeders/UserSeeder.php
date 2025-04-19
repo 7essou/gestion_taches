@@ -20,7 +20,13 @@ class UserSeeder extends Seeder
                 'name'=>'Mohamed',
                 'password'=>Hash::make('00000000'),
                 'role'=>'admin'
-            ]
+            ],
+            [
+                'email'=>'7essou@gmail.com',
+                'name'=>'Hessou',
+                'password'=>Hash::make('123456789'),
+                'role'=>'employer'
+            ],
         ]);
     }
 }
