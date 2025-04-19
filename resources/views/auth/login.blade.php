@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{route('auth')}}" method="post">
+    <form action="{{route('login')}}" method="post">
         {{csrf_field()}}
       <input type="text" name="email" placeholder="email" > <br>
       <input type="password" name="password" placeholder="email" > <br>

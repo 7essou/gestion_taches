@@ -7,5 +7,6 @@
 </head>
 <body>
     test
+    {{Auth::user()->role}}
 </body>
 </html>
