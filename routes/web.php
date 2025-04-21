@@ -9,11 +9,11 @@ use App\Http\Controllers\EmployeController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function(){
-    Route::get('/login',[ConnexionController::class,'show']);
+    Route::get('/',[ConnexionController::class,'show']);
     Route::post('/login', [ConnexionController::class,'login'])->name('login');
 });
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::middleware('auth')->group(function(){
     Route::post('logout',[DeconnexionController::class,'logout'])->name('logout');
